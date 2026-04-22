@@ -1,0 +1,12 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: Test - Blog
+-->
+{% extends "./layouts/base.hubl.html" %} {% block body %}
+<div class="mx-auto max-w-5xl p-6">
+  {% dnd_area "body_dnd_area" %}
+  <!-- generates an empty drag and drop area drop-section -->
+  {% end_dnd_area %}
+</div>
+{% endblock body %}
