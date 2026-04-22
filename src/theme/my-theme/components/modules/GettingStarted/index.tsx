@@ -1,6 +1,7 @@
 import { RichText } from '@hubspot/cms-components';
 import {
   ImageField,
+  LinkField,
   ModuleFields,
   RichTextField,
   TextField,
@@ -76,6 +77,17 @@ export const fields = (
       label="Docs URL"
       default={{ href: 'https://github.hubspot.com/cms-react/' }}
       supportedTypes={["EXTERNAL"]}
+      />
+      <LinkField 
+      name="examplesLink"
+      label="Examples Link"
+      default={{ url: { type: 'EXTERNAL', content_id: 0, href: 'https://github.com/HubSpot/cms-react/tree/main/examples' } }}
+
+      />
+      <LinkField
+      name="docsLink"
+      label="Docs Link"
+      default={{ url: { type: 'EXTERNAL', content_id: 0, href: 'https://github.hubspot.com/cms-react/' } }}
       />
   </ModuleFields>
 );
