@@ -111,5 +111,5 @@ export const fields = (
 );
 
 export const meta = {
-  label: 'Getting Started with CMS',
+  label: 'Getting Started Section',
 };

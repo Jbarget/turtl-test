@@ -1,3 +1,4 @@
+import { CrmObjectPropertyField, ModuleFields, TextField } from '@hubspot/cms-components/fields';
 import * as React from 'react';
 import { Input } from '../Input/index.js';
 
@@ -52,3 +53,15 @@ export function FormField({
   );
 }
 
+export const meta = {
+  label: 'Form Field',
+};
+
+export const fields = (
+  <ModuleFields>
+    <TextField name="label" label="Label" />
+    <TextField name="placeholder" label="Placeholder" />
+    <CrmObjectPropertyField name="value" label="Value" objectType='CONTACT'/>
+    <TextField name="errorMessage" label="Error Message" />
+  </ModuleFields>
+);

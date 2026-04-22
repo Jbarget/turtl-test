@@ -45,3 +45,7 @@ export function Input({
     </label>
   );
 }
+
+export const meta = {
+  label: 'Input',
+};
