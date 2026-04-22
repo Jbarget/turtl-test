@@ -1,4 +1,4 @@
-import { RichText } from '@hubspot/cms-components';
+import { RichText, type ModuleProps } from '@hubspot/cms-components';
 import {
   ImageField,
   LinkField,
@@ -10,7 +10,25 @@ import {
 import logo from '../../../assets/sprocket.svg';
 import { Button } from '../../atoms/Button/index.js';
 
-export function Component({ fieldValues }) {
+type LinkValue = {
+  url?: { type: string; content_id: number; href: string };
+  open_in_new_tab?: boolean;
+  no_follow?: boolean;
+  sponsored?: boolean;
+  user_generated_content?: boolean;
+};
+
+type GettingStartedFieldValues = {
+  logo: { src: string; alt?: string; width?: number; height?: number };
+  headline: string;
+  gettingStarted: string;
+  examplesUrl?: { href?: string };
+  docsUrl?: { href?: string };
+  examplesLink?: LinkValue;
+  docsLink?: LinkValue;
+};
+
+export function Component({ fieldValues }: ModuleProps<GettingStartedFieldValues>) {
   const { src, alt, width, height } = fieldValues.logo;
 
   return (
@@ -26,12 +44,12 @@ export function Component({ fieldValues }) {
         <Button
           variant="primary"
           label="Examples"
-          href={fieldValues.examplesUrl?.href || '#'}
+          href={fieldValues.examplesLink?.url?.href || fieldValues.examplesUrl?.href || '#'}
         />
         <Button
           variant="secondary"
           label="Read the Docs"
-          href={fieldValues.docsUrl?.href || '#'}
+          href={fieldValues.docsLink?.url?.href || fieldValues.docsUrl?.href || '#'}
         />
       </div>
     </div>
