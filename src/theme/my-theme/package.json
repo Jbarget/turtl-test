@@ -1,0 +1,23 @@
+{
+  "name": "cms-react-starter-theme",
+  "version": "1.0.0",
+  "description": "CMS React starter theme",
+  "scripts": {
+    "start": "hs-cms-dev-server .",
+    "auth": "hs account auth",
+    "deploy": "npm run tailwind:build && npx --yes --package @hubspot/cli@latest hs project upload",
+    "tailwind:build": "npx @tailwindcss/cli -i ./styles/tailwind.css -o ./assets/tailwind.css",
+    "tailwind:watch": "npx @tailwindcss/cli -i ./styles/tailwind.css -o ./assets/tailwind.css --watch"
+  },
+  "type": "module",
+  "keywords": [],
+  "dependencies": {
+    "@hubspot/cms-components": "latest",
+    "react": "^18"
+  },
+  "devDependencies": {
+    "@hubspot/cms-dev-server": "latest",
+    "@tailwindcss/cli": "^4",
+    "tailwindcss": "^4"
+  }
+}

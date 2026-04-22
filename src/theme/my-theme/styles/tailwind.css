@@ -1,0 +1,55 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-brand: #64dc7b;
+  --color-accent: #2b3033;
+  --color-surface: #ffffff;
+  --color-text: #2b3033;
+
+  --color-neutral-0: #f8f9f9;
+  --color-neutral-100: #f5f6f6;
+  --color-neutral-200: #f0f2f2;
+  --color-neutral-300: #e9ecec;
+  --color-neutral-400: #dfe4e4;
+  --color-neutral-500: #d1d8d9;
+  --color-neutral-600: #acb9bb;
+  --color-neutral-700: #8ea0a3;
+  --color-neutral-800: #768c8f;
+  --color-neutral-900: #637c7f;
+  --color-neutral-1000: #2b3132;
+
+  --color-green-0: #e7fcea;
+  --color-green-100: #dcfbe1;
+  --color-green-200: #cdf9d4;
+  --color-green-300: #b8f7c2;
+  --color-green-400: #9af3a8;
+  --color-green-500: #6fee83;
+  --color-green-600: #66dc7c;
+  --color-green-700: #5ecc76;
+  --color-green-800: #57be71;
+  --color-green-900: #51b16c;
+  --color-green-1000: #4ba568;
+
+  --color-yellow-0: #fefaea;
+  --color-yellow-100: #fff8d4;
+  --color-yellow-200: #fff5c1;
+  --color-yellow-300: #fff1a7;
+  --color-yellow-400: #ffeb81;
+  --color-yellow-500: #ffe24b;
+  --color-yellow-600: #e8d14a;
+  --color-yellow-700: #d3c249;
+  --color-yellow-800: #c0b548;
+  --color-yellow-900: #afa947;
+  --color-yellow-1000: #a09e46;
+
+  --color-orange-500: #f9974c;
+  --color-red-500: #f24c4c;
+  --color-purple-500: #d07ee6;
+  --color-blue-500: #6f9bed;
+  --color-pink-500: #ffa9e7;
+
+  --color-white: #ffffff;
+  --color-black: #2b3132;
+  --font-sans: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto,
+    Arial, 'Noto Sans', 'Apple Color Emoji', 'Segoe UI Emoji';
+}
