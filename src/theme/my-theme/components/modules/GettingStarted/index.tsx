@@ -4,34 +4,34 @@ import {
   ModuleFields,
   RichTextField,
   TextField,
+  UrlField,
 } from '@hubspot/cms-components/fields';
 import logo from '../../../assets/sprocket.svg';
+import { Button } from '../../atoms/Button/index.js';
 
 export function Component({ fieldValues }) {
   const { src, alt, width, height } = fieldValues.logo;
 
   return (
-    <div className="flex min-h-[500px] h-[50vh] flex-col items-center justify-center gap-6 bg-[var(--color-accent)] px-6 text-center font-sans text-[var(--palette-white)]">
+    <div className="flex min-h-[500px] flex-col items-center justify-center gap-6 bg-accent px-6 text-center font-sans text-white">
       <img src={src} alt={alt} width={width} height={height} />
       <h1 className="text-4xl font-semibold tracking-tight">
         {fieldValues.headline}
       </h1>
-      <div className="[&_pre]:inline-block [&_pre]:text-[var(--color-primary)] [&_pre]:font-bold [&_pre]:text-sm">
-        <RichText fieldPath="gettingStarted" />
+      <div className="inline-block text-primary font-bold text-sm">
+        <RichText className='' fieldPath="gettingStarted" />
       </div>
       <div className="mt-2 flex items-center justify-center gap-5">
-        <a
-          className="rounded-md bg-green-500 px-5 py-2.5 no-underline transition-opacity hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--palette-white)]"
-          href="https://github.com/HubSpot/cms-react/tree/main/examples"
-        >
-          Examples
-        </a>
-        <a
-          className="rounded-md bg-green-500 px-5 py-2.5 no-underline transition-opacity hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--palette-white)]"
-          href="https://github.hubspot.com/cms-react/"
-        >
-          Read the Docs
-        </a>
+        <Button
+          variant="primary"
+          label="Examples"
+          href={fieldValues.examplesUrl?.href || '#'}
+        />
+        <Button
+          variant="secondary"
+          label="Read the Docs"
+          href={fieldValues.docsUrl?.href || '#'}
+        />
       </div>
     </div>
   );
@@ -65,6 +65,18 @@ export const fields = (
       label="Getting Started"
       default={richTextFieldDefaultValue}
     />
+    <UrlField
+      name="examplesUrl"
+      label="Examples URL"
+      default={{ href: 'https://github.com/HubSpot/cms-react/tree/main/examples' }}
+      supportedTypes={["EXTERNAL"]}
+    />
+    <UrlField
+      name="docsUrl"
+      label="Docs URL"
+      default={{ href: 'https://github.hubspot.com/cms-react/' }}
+      supportedTypes={["EXTERNAL"]}
+      />
   </ModuleFields>
 );
 
