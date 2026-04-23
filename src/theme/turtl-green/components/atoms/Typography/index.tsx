@@ -2,7 +2,7 @@ import * as React from "react";
 import { tv, VariantProps } from "tailwind-variants";
 
 const headingVariants = tv({
-  base: '',
+  base: "font-parafina",
   variants: {
     size: {
       large: 'text-5xl font-bold',
@@ -37,12 +37,12 @@ export function Heading({ as = "h1", size, className, ...props }: HeadingProps) 
 }
 
 const typographyVariants = tv({
-  base: 'py-5',
+  base: "py-5 font-inter",
   variants: {
     variant: {
-      subheading: 'Inter font-bold',
-      body: 'InterRegular, font-semibold',
-      cta: 'InterRegular',
+      subheading: "font-bold",
+      body: "font-semibold",
+      cta: "font-bold",
     },
     color: {
       primary: 'text-black',
