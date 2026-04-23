@@ -1,6 +1,6 @@
 {
-  "name": "getting-started-with-cms-react",
-  "description": "Getting started with CMS React",
+  "name": "turtl-green",
+  "description": "Turtl Green",
   "devDependencies": {
     "@hubspot/prettier-plugin-hubl": "latest",
     "eslint": "^8.24.0",
@@ -9,10 +9,10 @@
     "prettier": "^2.7.1"
   },
   "scripts": {
-    "start": "cd src/theme/my-theme && npm start",
-    "storybook": "cd src/theme/my-theme && npm run start:storybook",
+    "start": "cd src/theme/turtl && npm start",
+    "storybook": "cd src/theme/turtl && npm run start:storybook",
     "prettier": "prettier . --check",
-    "deploy": "npm --prefix src/theme/my-theme run tailwind:build && npx --yes --package @hubspot/cli@latest hs project upload"
+    "deploy": "npm --prefix src/theme/turtl run tailwind:build && npx --yes --package @hubspot/cli@latest hs project upload"
   },
   "engines": {
     "node": ">=20.0.0"

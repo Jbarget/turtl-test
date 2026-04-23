@@ -1,7 +1,7 @@
 {
-  "name": "cms-react-starter-theme",
+  "name": "turtl-green-theme",
   "version": "1.0.0",
-  "description": "CMS React starter theme",
+  "description": "Turtl Green Theme",
   "scripts": {
     "start": "hs-cms-dev-server .",
     "start:storybook": "npm run tailwind:build && hs-cms-dev-server . --storybook",

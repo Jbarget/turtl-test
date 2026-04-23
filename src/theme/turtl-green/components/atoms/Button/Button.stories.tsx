@@ -1,7 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import * as React from 'react';
 
-import { Button } from './index';
+import { Button } from './index.tsx';
 
 const meta: Meta<typeof Button> = {
   title: 'Atoms/Button',

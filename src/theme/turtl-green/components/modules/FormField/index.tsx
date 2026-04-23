@@ -1,6 +1,6 @@
 import { ModuleFields, TextField } from '@hubspot/cms-components/fields';
 import * as React from 'react';
-import { Input } from '../../atoms/Input';
+import { Input } from '../../atoms/Input/index.tsx';
 
 
 export type FormFieldProps = Omit<

@@ -2,7 +2,7 @@
   "uid": "theme",
   "type": "theme",
   "config": {
-    "themePath": "my-theme",
+    "themePath": "turtl",
     "secretNames": []
   }
 }
