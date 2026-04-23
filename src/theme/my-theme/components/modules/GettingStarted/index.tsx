@@ -9,6 +9,7 @@ import {
 } from '@hubspot/cms-components/fields';
 import logo from '../../../assets/sprocket.svg';
 import { Button } from '../../atoms/Button/index.js';
+import { Heading, Typography } from '../../atoms/Typography/index.tsx';
 
 type LinkValue = {
   url?: { type: string; content_id: number; href: string };
@@ -34,9 +35,12 @@ export function Component({ fieldValues }: ModuleProps<GettingStartedFieldValues
   return (
     <div className="flex min-h-[500px] flex-col items-center justify-center gap-6 bg-accent px-6 text-center font-sans text-white">
       <img src={src} alt={alt} width={width} height={height} />
-      <h1 className="text-4xl font-semibold tracking-tight">
+      <Heading size="large">
         {fieldValues.headline}
-      </h1>
+      </Heading>
+      <Typography>
+        {fieldValues.headline}
+      </Typography>
       <div className="inline-block text-primary font-bold text-sm">
         <RichText className='' fieldPath="gettingStarted" />
       </div>

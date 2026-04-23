@@ -14,7 +14,9 @@
   "keywords": [],
   "dependencies": {
     "@hubspot/cms-components": "latest",
-    "react": "^18"
+    "react": "^18",
+    "tailwind-merge": "^3.3.1",
+    "tailwind-variants": "^3.2.2"
   },
   "devDependencies": {
     "@hubspot/cms-dev-server": "latest",

@@ -1,6 +1,7 @@
-import { CrmObjectPropertyField, ModuleFields, TextField } from '@hubspot/cms-components/fields';
+import { ModuleFields, TextField } from '@hubspot/cms-components/fields';
 import * as React from 'react';
-import { Input } from '../Input/index.js';
+import { Input } from '../../atoms/Input';
+
 
 export type FormFieldProps = Omit<
   React.InputHTMLAttributes<HTMLInputElement>,
@@ -59,9 +60,8 @@ export const meta = {
 
 export const fields = (
   <ModuleFields>
-    <TextField name="label" label="Label" />
+    <TextField name="fieldLabel" label="Field Label" />
     <TextField name="placeholder" label="Placeholder" />
-    <CrmObjectPropertyField name="value" label="Value" objectType='CONTACT'/>
     <TextField name="errorMessage" label="Error Message" />
   </ModuleFields>
 );
