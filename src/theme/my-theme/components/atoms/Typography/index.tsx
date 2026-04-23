@@ -17,15 +17,19 @@ const headingVariants = tv({
 
 type HeadingVariants = VariantProps<typeof headingVariants>;
 
-type HeadingProps = React.ComponentPropsWithoutRef<"h1"> &
+type HeadingTag = "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
+
+type HeadingProps = React.ComponentPropsWithoutRef<HeadingTag> &
   HeadingVariants & {
+    as?: HeadingTag;
     className?: string;
   };
 
 
-export function Heading({ size, className, ...props }: HeadingProps) {
+export function Heading({ as = "h1", size, className, ...props }: HeadingProps) {
+  const Tag = as;
   return (
-    <h1
+    <Tag
       {...props}
       className={headingVariants({ size, class: className })}
     />
