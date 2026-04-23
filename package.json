@@ -10,6 +10,7 @@
   },
   "scripts": {
     "start": "cd src/theme/my-theme && npm start",
+    "storybook": "cd src/theme/my-theme && npm run start:storybook",
     "prettier": "prettier . --check",
     "deploy": "npm --prefix src/theme/my-theme run tailwind:build && npx --yes --package @hubspot/cli@latest hs project upload"
   },

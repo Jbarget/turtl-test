@@ -19,7 +19,7 @@ const labelStyles = 'mb-1 block font-sans text-sm font-semibold text-text';
 const inputStyles =
   'w-full rounded-md bg-surface px-3 py-2 font-sans text-sm text-text ring-1 ring-inset ring-neutral-500 placeholder:text-neutral-800 focus:outline-none focus:ring-2 focus:ring-primary disabled:cursor-not-allowed disabled:bg-neutral-200 disabled:opacity-70';
 
-export function Input({
+export function Component({
   label,
   placeholder,
   value,

@@ -16,7 +16,7 @@ export type FormFieldProps = Omit<
 
 const errorStyles = 'mt-1 font-sans text-xs font-medium text-red-500';
 
-export function FormField({
+export function Component({
   label,
   placeholder,
   value,

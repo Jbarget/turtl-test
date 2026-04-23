@@ -4,6 +4,7 @@
   "description": "CMS React starter theme",
   "scripts": {
     "start": "hs-cms-dev-server .",
+    "start:storybook": "npm run tailwind:build && hs-cms-dev-server . --storybook",
     "auth": "hs account auth",
     "deploy": "npm run tailwind:build && npx --yes --package @hubspot/cli@latest hs project upload",
     "tailwind:build": "npx @tailwindcss/cli -i ./styles/tailwind.css -o ./assets/tailwind.css",
