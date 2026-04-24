@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Turtl Green Theme",
   "scripts": {
-    "start": "hs-cms-dev-server .",
+    "start": "hs-cms-dev-server . --generateFieldsTypes",
     "start:storybook": "npm run tailwind:build && hs-cms-dev-server . --storybook",
     "auth": "hs account auth",
     "deploy": "npm run tailwind:build && npx --yes --package @hubspot/cli@latest hs project upload",
