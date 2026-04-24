@@ -11,6 +11,43 @@
     <link rel="shortcut icon" href="{{ brand_settings.primaryFavicon.src }}" />
     {% endif %}
     <meta name="description" content="{{ page_meta.meta_description }}" />
+    <style>
+      @font-face {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 100 900;
+        font-display: swap;
+        src: url('{{ get_asset_url('../../assets/fonts/Inter/Inter-VariableFont.ttf') }}')
+          format('truetype');
+      }
+
+      @font-face {
+        font-family: 'Inter';
+        font-style: italic;
+        font-weight: 100 900;
+        font-display: swap;
+        src: url('{{ get_asset_url('../../assets/fonts/Inter/Inter-Italic-VariableFont.ttf') }}')
+          format('truetype');
+      }
+
+      @font-face {
+        font-family: 'Parafina';
+        font-style: normal;
+        font-weight: 700;
+        font-display: swap;
+        src: url('{{ get_asset_url('../../assets/fonts/Parafina/Parafina-BoldS.woff') }}')
+          format('woff');
+      }
+
+      @font-face {
+        font-family: 'Parafina';
+        font-style: normal;
+        font-weight: 900;
+        font-display: swap;
+        src: url('{{ get_asset_url('../../assets/fonts/Parafina/Parafina-BlackS.woff') }}')
+          format('woff');
+      }
+    </style>
     {{ require_css(get_asset_url('../../assets/tailwind.css')) }} {# To see a
     full list of what is included via standard_footer_includes please reference
     this article:
