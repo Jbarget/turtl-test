@@ -21,6 +21,7 @@
   "devDependencies": {
     "@hubspot/cms-dev-server": "latest",
     "@tailwindcss/cli": "^4",
-    "tailwindcss": "^4"
+    "tailwindcss": "^4",
+    "typescript": "^6.0.3"
   }
 }
